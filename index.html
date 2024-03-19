@@ -20,6 +20,18 @@
         th {
             background-color: #f2f2f2;
         }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .buy-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -30,26 +42,33 @@
                 <th>Product</th>
                 <th>Description</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Product 1</td>
-                <td></td>
+                <td>Description of Product 1</td>
                 <td>$10.00</td>
+                <td><a href="payment_accounting.html" class="buy-button">Buy</a></td>
             </tr>
             <tr>
                 <td>Product 2</td>
-                <td></td>
+                <td>Description of Product 2</td>
                 <td>$15.00</td>
+                <td><a href="payment_accounting.html" class="buy-button">Buy</a></td>
             </tr>
             <tr>
                 <td>Product 3</td>
-                <td></td>
+                <td>Description of Product 3</td>
                 <td>$20.00</td>
+                <td><a href="payment_accounting.html" class="buy-button">Buy</a></td>
             </tr>
             <!-- Add more rows as needed -->
         </tbody>
     </table>
+
+    <!-- Link to Payment & Accounting page -->
+    <p><a href="payment_accounting.html">Go to Payment & Accounting</a></p>
 </body>
 </html>
