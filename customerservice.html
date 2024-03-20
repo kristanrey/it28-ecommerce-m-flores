@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .chat-container {
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        .chat-body {
+            height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user-message {
+            text-align: right;
+        }
+        .agent-message {
+            text-align: left;
+        }
+        .message-content {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            max-width: 70%;
+        }
+        .user-message .message-content {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+        }
+        .agent-message .message-content {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .input-container {
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        .input-container input[type="text"] {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .input-container button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Customer Service Chat
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="agent-message message">
+                <div class="message-content">
+                    Welcome to our customer service chat! How can we assist you today?
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("messageInput");
+            var message = messageInput.value.trim();
+            
+            if (message !== "") {
+                appendMessage("user", message);
+                messageInput.value = "";
+                // Here you can add logic to send the message to a backend or customer service agent
+                // and handle the response accordingly
+            }
+        }
+
+        function appendMessage(sender, message) {
+            var chatBody = document.getElementById("chatBody");
+            var messageContainer = document.createElement("div");
+            messageContainer.classList.add("message");
+            messageContainer.classList.add(sender + "-message");
+            var messageContent = document.createElement("div");
+            messageContent.classList.add("message-content");
+            messageContent.textContent = message;
+            messageContainer.appendChild(messageContent);
+            chatBody.appendChild(messageContainer);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+</body>
+</html>

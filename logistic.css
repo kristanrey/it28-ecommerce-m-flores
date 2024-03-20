@@ -1,17 +1,34 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #b85e22;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .tracking-info {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .success-message {
@@ -31,4 +48,9 @@ body {
 
 .status-item i {
     margin-right: 10px;
+    color: #007bff; /* blue color for icons */
+}
+
+.status-item div {
+    color: #666;
 }
