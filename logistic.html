@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logistic Tracking</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .tracking-info {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .success-message {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+    .tracking-status {
+        margin-top: 20px;
+    }
+    .status-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .status-item i {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tracking-info">
+        <h2>Order Successfully Placed!</h2>
+        <p class="success-message">Your order has been successfully placed.</p>
+        <p>Below is the tracking information for your order:</p>
+        <div class="tracking-status">
+            <div class="status-item">
+                <i class="fas fa-box"></i>
+                <div>Your order is being processed</div>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-shipping-fast"></i>
+                <div>Your order is on its way to our distribution center</div>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-warehouse"></i>
+                <div>Your order has arrived at our distribution center</div>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-truck"></i>
+                <div>Your order is out for delivery</div>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-check-circle"></i>
+                <div>Your order has been delivered!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome link for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
